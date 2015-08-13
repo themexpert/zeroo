@@ -40,7 +40,7 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 
 	    	'url'    => '' ) ),
 
-	    'comment_field' => '<p><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea>' . '</p>',
+	    'comment_field' => '<p><label for="comment">' . __( 'Comment', 'tx-zeroo' ) . '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea>' . '</p>',
 
 	    'comment_notes_after' => '',
 	    'label_submit'		=> __('Submit', 'tx-zeroo'),
@@ -71,7 +71,7 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
-		<ol class="comment-list list-unstyled list-group">
+		<ol class="comment-list list-unstyled">
 			<?php
 				/*wp_list_comments( array( 
 					'style'      => 'ol',
