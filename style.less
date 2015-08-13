@@ -1,0 +1,471 @@
+/*
+Theme Name: Zeroo
+Theme URI: http://demo.themexpert.com/
+Author: ThemeXpert
+Author URI: http://www.themexpert.com/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tx-zeroo
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body {
+	font-family: 'Droid Serif', serif;
+	font-size: 15px;
+	color: #6a6a6a;
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+	-webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+img {
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+.btn {
+	color: #aaa;
+	background: none;
+	border-radius: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: inherit;
+}
+
+.btn-primary {
+	color: #2e6da4;
+	border-color: lighten(#2e6da4, 10%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: darken(#2e6da4, 10%);
+		color: #444;
+		background: none;
+	}
+}
+.btn-success {
+	color: #4cae4c;
+	border-color: lighten(#4cae4c, 10%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: darken(#4cae4c, 10%);
+		color: #444;
+		background: none;
+	}
+}
+.btn-info {
+	color: #46b8da;
+	border-color: lighten(#46b8da, 10%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: darken(#46b8da, 10%);
+		color: #444;
+		background: none;
+	}
+}
+.btn-warning {
+	color: #eea236;
+	border-color: lighten(#eea236, 10%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: darken(#eea236, 10%);
+		color: #444;
+		background: none;
+	}
+}
+.btn-danger {
+	color: #d43f3a;
+	border-color: lighten(#d43f3a, 10%);
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: darken(#d43f3a, 10%);
+		color: #444;
+		background: none;
+	}
+}
+
+
+/* Position Specific */
+#header {
+	position: relative;
+	z-index: 99;
+	padding: 15px 0;
+	background: none;
+	-webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+
+	&.affix {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: #fff;
+		box-shadow: 0 0 3px #ccc;
+		padding: 0;
+
+		.navbar-brand {
+			color: #444;
+			font-size: 24px;
+
+			&.logo {width: 100px;}
+		}
+
+		.navbar-nav {
+			> li > a {color: #444;}
+		}
+	}
+}
+
+#hero-area {
+	height: 450px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    > img {
+    	width: 100%;
+    	min-height: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    }
+	
+	.hero-details {
+		position: relative;
+		z-index: 11;
+		margin: 180px 0 0;
+
+		> h1 {
+			font-size: 40px;
+			text-transform: uppercase;
+
+			a:hover {text-decoration: none;}
+		}
+
+		.content {
+			font-size: 24px;
+		}
+	}
+
+    &::after {
+    	content: "";
+    	display: block;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+#footer {
+	background: #2d2d2d;
+	padding: 15px;
+	color: #fff;
+
+	p {margin: 0;}
+	a:hover {color: #fff;}
+}
+
+
+#sidebar {
+	width: 300px;
+    position: fixed;
+    background-color: #e5e5e5;
+    padding: 20px;
+    top: 0;
+    left: auto;
+    right: -300px;
+    bottom: 0;
+    z-index: 111;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    .widget_search {
+    	background: none;
+    	box-shadow: none;
+    	border: 0;
+    }   
+}
+body.sidebar-open {
+	left: -300px;
+
+	#main-navigation .sidebar-toggle.glyphicon::before {content: "\e014";}
+
+	#sidebar {right: 0;}
+}
+
+
+/* Main Menu */
+#main-navigation {
+	margin-bottom: 0;
+	background: none;
+	border: 0;
+
+	.navbar-brand {
+		font-size: 40px;
+		text-transform: uppercase;
+		color: #fff;
+
+		&.logo {
+			font-size: 0;
+			width: 110px;
+		}
+	}
+
+	.navbar-nav {
+		margin-left: 30px;
+
+		> li > a {
+			color: #fff;
+			&:after {
+				content: "";
+				display: block;
+				width: 0%;
+				height: 3px;
+				margin: 5px 0 0;
+				background: rgba(255, 255, 255, 0.5);
+				-webkit-transition: all 0.3s linear;  				
+				-moz-transition: all 0.3s linear;  				
+				-o-transition: all 0.3s linear;  				
+				-transition: all 0.3s linear;
+			}	
+		}
+
+		li.current-menu-item a,
+		> li > a:hover {
+			color: #337ab7;
+			&:after {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+
+	.navbar-collapse.in {
+		background: rgba(255, 255, 255, 0.3);
+		padding-left: 0;
+		padding-right: 0;
+
+		.navbar-nav {margin: 0;}
+	}
+
+	.sidebar-toggle {
+		padding: 10px;
+	    background-color: rgba(0, 0, 0, 0.3);
+	    color: #e6e6e6;
+	    margin: 7px 0 0 7px;
+	    cursor: pointer;
+
+	    &.glyphicon::before {content: "\e236";}
+
+	    &:hover {color: #fff;background-color: rgba(0, 0, 0, 0.5);}
+	}
+}
+
+
+/* Widgets Style */
+.widget_search {
+	.input-group-btn .btn {
+		background: #fff;
+		border-color: #ccc;
+		border-radius: 4px;
+	}
+}
+
+
+.social-icons {
+	margin: 0;
+    padding: 15px 0;
+    list-style: none;
+
+    li {
+    	display: inline-block;
+    	margin: 0 7px 0 0;
+
+    	a {
+    		color: #888;
+    		font-size: 18px;
+    		&:hover {color: #444;}
+    	}
+    }
+}
+
+
+/* Common Styles for Specific pages */
+body.archive,
+body.blog,
+body.category,
+body.error404,
+body.search {
+	#header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		&.affix {position: fixed;}
+	}
+}
+
+
+/* Blog page */
+body.archive,
+body.blog,
+body.category {	
+
+	.post {
+		padding: 40px 0;
+		border-bottom: 1px solid #e5e5e5;
+		text-align: center;
+
+		.entry-title {
+			color: #444;
+			font-size: 30px;
+			margin: 15px 0;
+
+			a {
+				color: #444;
+				&:hover {text-decoration: none;color: #111;}
+			}
+		}
+
+		.entry-meta,
+		.entry-content,
+		.entry-footer {margin-top: 15px;}
+		
+		iframe {margin-bottom: 15px;height: 350px;width: 100%;}
+		.entry-footer {
+			text-align: right;
+
+			.btn {float: left;}
+			.cat-links, .tags-links, 
+			.comments-link, .edit-link {margin-left: 8px;margin-top: 8px;display: inline-block;}
+		}
+	}
+}
+
+
+
+/* Single Page */
+body.single,
+body.page-template-default {
+	#main-navigation .navbar-nav {
+		li.current-menu-item a,
+		> li > a:hover {
+			color: #111;
+		}
+	}
+	.image-featured {
+		height: 400px;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+
+	    > img {
+	    	width: 100%;
+	    }
+
+	    &::before,
+	    &::after {
+	    	content: "";
+	    	display: block;
+	    	position: absolute;
+	    	top: 0;
+	    	left: 0;
+	    	right: 0;
+	    	bottom: 0;
+	    }
+
+	    &::before {
+	    	background: rgba(180, 180, 180, 0.5);
+	    }
+
+	    &::after {	    	
+	    	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+0,1+100 */
+			background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	    }
+	}
+
+	#main {
+		margin-top: 120px;
+	}
+
+	.post,
+	.page {
+		.entry-title {
+			margin: 0 0 15px;
+		}
+
+		.entry-meta,
+		.entry-footer {margin-top: 15px;}
+
+		.entry-content {
+			font-size: 18px;
+			margin-top: 40px;
+		}
+
+		blockquote {
+			margin-left: 15px;
+			color: #aaa;
+		}
+	}
+
+	.entry-header {text-align: center;}
+	.entry-footer {
+		text-align: right;
+		margin: 10px 0;
+
+		.cat-links, .tags-links, 
+		.comments-link, .edit-link {margin-left: 8px;}
+	}
+}
+
+/* Comments List */
+.comment-list {
+	.comment-author img {max-width: initial;}
+}
+
+
+/* Error 404 page */
+.error-404 {
+	padding: 60px 0;
+
+	h1 {font-size: 70px;}
+}
