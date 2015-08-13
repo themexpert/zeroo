@@ -14,7 +14,9 @@ get_header(); ?>
 			// check if the post has a Post Thumbnail assigned to it.
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail( '', array( 'itemprop' => 'image') );
-			}
+			}else {?>
+				<img src="<?php header_image(); ?>" alt="">
+			<?php } ?>
 		?>
 	</div>
 	

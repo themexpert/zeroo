@@ -70,7 +70,7 @@
 		
 		
 		</div> -->
-	</header><!-- #masthead -->
+	</header><!-- #header -->
 		
 
 	
