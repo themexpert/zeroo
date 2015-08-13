@@ -331,6 +331,16 @@ body.category .post {
   border-bottom: 1px solid #e5e5e5;
   text-align: center;
 }
+body.archive .post .image-inner,
+body.blog .post .image-inner,
+body.category .post .image-inner {
+  text-align: center;
+}
+body.archive .post .image-inner > img,
+body.blog .post .image-inner > img,
+body.category .post .image-inner > img {
+  display: inline-block;
+}
 body.archive .post .entry-title,
 body.blog .post .entry-title,
 body.category .post .entry-title {
