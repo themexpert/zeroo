@@ -185,12 +185,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-	background: #2d2d2d;
+	background: #f6f6f6;
 	padding: 15px;
-	color: #fff;
+	margin: 20px 0 0;
 
 	p {margin: 0;}
-	a:hover {color: #fff;}
 }
 
 
@@ -213,7 +212,21 @@ h1, h2, h3, h4, h5, h6 {
     	background: none;
     	box-shadow: none;
     	border: 0;
-    }   
+    } 
+
+    .panel > ul {
+    	list-style: none;
+		padding: 0;
+    	li {
+    		padding: 10px 15px 5px;
+
+    		&:before {
+    			content: "\f101";
+    			font-family: FontAwesome;
+    			margin-right: 5px;
+    		}
+    	}
+    }  
 }
 body.sidebar-open {
 	left: -300px;
@@ -246,13 +259,14 @@ body.sidebar-open {
 
 		> li > a {
 			color: #fff;
+			opacity: 0.7;
 			&:after {
 				content: "";
 				display: block;
 				width: 0%;
 				height: 3px;
 				margin: 5px 0 0;
-				background: rgba(255, 255, 255, 0.5);
+				background: #fff;
 				-webkit-transition: all 0.3s linear;  				
 				-moz-transition: all 0.3s linear;  				
 				-o-transition: all 0.3s linear;  				
@@ -262,7 +276,7 @@ body.sidebar-open {
 
 		li.current-menu-item a,
 		> li > a:hover {
-			color: #337ab7;
+			opacity: 1;
 			&:after {
 				width: 100%;
 				display: block;
@@ -297,7 +311,7 @@ body.sidebar-open {
 	.input-group-btn .btn {
 		background: #fff;
 		border-color: #ccc;
-		border-radius: 4px;
+		border-radius: 0 4px 4px 0;
 	}
 }
 
@@ -318,6 +332,7 @@ body.sidebar-open {
     	}
     }
 }
+
 
 
 /* Common Styles for Specific pages */
