@@ -511,6 +511,17 @@ body.single .entry-footer .edit-link,
 body.page-template-default .entry-footer .edit-link {
   margin-left: 8px;
 }
+body.single-format-gallery .gallery::before,
+body.single-format-gallery .gallery::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+body.single-format-gallery .gallery figure.gallery-item {
+  float: left;
+  width: 25%;
+  margin: 20px 0;
+}
 /* Comments List */
 .comment-list li {
   margin-top: 15px;

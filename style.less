@@ -477,6 +477,24 @@ body.page-template-default {
 	}
 }
 
+body.single-format-gallery {
+	.gallery {
+		&::before,&::after {
+			display: table;
+			content: "";
+			clear: both;
+		}
+
+		figure.gallery-item {
+		    float: left;
+		    width: 25%;
+		    margin: 20px 0;
+		}
+	}
+	
+}
+
+
 /* Comments List */
 .comment-list {
 	li {margin-top: 15px;}
