@@ -170,15 +170,12 @@ h6 {
   background: rgba(0, 0, 0, 0.5);
 }
 #footer {
-  background: #2d2d2d;
+  background: #f6f6f6;
   padding: 15px;
-  color: #fff;
+  margin: 20px 0 0;
 }
 #footer p {
   margin: 0;
-}
-#footer a:hover {
-  color: #fff;
 }
 #sidebar {
   width: 300px;
@@ -199,6 +196,18 @@ h6 {
   background: none;
   box-shadow: none;
   border: 0;
+}
+#sidebar .panel > ul {
+  list-style: none;
+  padding: 0;
+}
+#sidebar .panel > ul li {
+  padding: 10px 15px 5px;
+}
+#sidebar .panel > ul li:before {
+  content: "\f101";
+  font-family: FontAwesome;
+  margin-right: 5px;
 }
 body.sidebar-open {
   left: -300px;
@@ -229,6 +238,7 @@ body.sidebar-open #sidebar {
 }
 #main-navigation .navbar-nav > li > a {
   color: #fff;
+  opacity: 0.7;
 }
 #main-navigation .navbar-nav > li > a:after {
   content: "";
@@ -236,7 +246,7 @@ body.sidebar-open #sidebar {
   width: 0%;
   height: 3px;
   margin: 5px 0 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: #fff;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -244,7 +254,7 @@ body.sidebar-open #sidebar {
 }
 #main-navigation .navbar-nav li.current-menu-item a,
 #main-navigation .navbar-nav > li > a:hover {
-  color: #337ab7;
+  opacity: 1;
 }
 #main-navigation .navbar-nav li.current-menu-item a:after,
 #main-navigation .navbar-nav > li > a:hover:after {
@@ -277,7 +287,7 @@ body.sidebar-open #sidebar {
 .widget_search .input-group-btn .btn {
   background: #fff;
   border-color: #ccc;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
 }
 .social-icons {
   margin: 0;
