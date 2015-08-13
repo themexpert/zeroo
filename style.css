@@ -502,6 +502,9 @@ body.page-template-default .entry-footer .edit-link {
   margin-left: 8px;
 }
 /* Comments List */
+.comment-list li {
+  margin-top: 15px;
+}
 .comment-list .comment-author img {
   max-width: initial;
 }

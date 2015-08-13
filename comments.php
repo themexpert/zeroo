@@ -71,7 +71,7 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
-		<ol class="comment-list list-unstyled list-group">
+		<ol class="comment-list list-unstyled">
 			<?php
 				/*wp_list_comments( array( 
 					'style'      => 'ol',
