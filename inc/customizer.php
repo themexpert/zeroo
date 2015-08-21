@@ -23,7 +23,7 @@ function tx_zeroo_customize_register( $wp_customize ) {
 
 		$wp_customize->add_setting('upload_logo', array(
 			'default-image' => '',
-			'sanitize_callback' => 'esc_url_raw'
+			'sanitize_callback' => 'esc_url_raw',
 		));	
 
 		$wp_customize->add_control(
@@ -31,7 +31,7 @@ function tx_zeroo_customize_register( $wp_customize ) {
 	            $wp_customize,
 	            'site_logo',
 	            array(
-	               'label'          => __( 'Upload your logo', 'tx-next' ),
+	               'label'          => __( 'Upload your logo', 'tx-zeroo' ),
 	               'type'           => 'image',
 	               'section'        => 'logo_settings',
 	               'settings'       => 'upload_logo',
@@ -43,7 +43,7 @@ function tx_zeroo_customize_register( $wp_customize ) {
 
 	// New section social link
     $wp_customize->add_section('social_link', array(
-        'title'    => __('Social Links', 'tx-next'),
+        'title'    => __('Social Links', 'tx-zeroo'),
         'priority' => 124,
     ));
 
@@ -51,12 +51,12 @@ function tx_zeroo_customize_register( $wp_customize ) {
 	    $wp_customize->add_setting('social_facebook', array(
 	        'default'        => '',
 	        'capability'     => 'edit_theme_options',
-	        'sanitize_callback' => 'esc_url_raw'
+	        'sanitize_callback' => 'esc_url_raw',
 	 
 	    ));
 	 
 	    $wp_customize->add_control('social_facebook_link', array(
-	        'label'      => __('Facebook', 'tx-next'),
+	        'label'      => __('Facebook', 'tx-zeroo'),
 	        'section'    => 'social_link',
 	        'settings'   => 'social_facebook',
 	    ));
@@ -65,12 +65,12 @@ function tx_zeroo_customize_register( $wp_customize ) {
 	    $wp_customize->add_setting('social_twitter', array(
 	        'default'       	 => '',
 	        'capability'  	 	 => 'edit_theme_options',
-	        'sanitize_callback'  => 'esc_url_raw'
+	        'sanitize_callback'  => 'esc_url_raw',
 	 
 	    ));
 	 
 	    $wp_customize->add_control('social_twitter_link', array(
-	        'label'      => __('Twitter', 'tx-next'),
+	        'label'      => __('Twitter', 'tx-zeroo'),
 	        'section'    => 'social_link',
 	        'settings'   => 'social_twitter',
 	    ));
@@ -79,12 +79,12 @@ function tx_zeroo_customize_register( $wp_customize ) {
 	    $wp_customize->add_setting('social_gplus', array(
 	        'default'        => '',
 	        'capability'     => 'edit_theme_options',
-	        'sanitize_callback'  => 'esc_url_raw'
+	        'sanitize_callback'  => 'esc_url_raw',
 	 
 	    ));
 	 
 	    $wp_customize->add_control('social_gplus_link', array(
-	        'label'      => __('Google Plus', 'tx-next'),
+	        'label'      => __('Google Plus', 'tx-zeroo'),
 	        'section'    => 'social_link',
 	        'settings'   => 'social_gplus',
 	    ));
@@ -93,11 +93,12 @@ function tx_zeroo_customize_register( $wp_customize ) {
 	    $wp_customize->add_setting('login_link', array(
 	        'capability' => 'edit_theme_options',
 	        'type'       => 'option',
+	        'sanitize_callback'  => 'esc_url_raw',
 	    ));
 	 
 	    $wp_customize->add_control('enable_login_link', array(
 	        'settings'  => 'login_link',
-	        'label'     => __('Enable login link', 'tx-next'),
+	        'label'     => __('Enable login link', 'tx-zeroo'),
 	        'section'   => 'social_link',
 	        'type'      => 'checkbox',
 	    ));
@@ -106,11 +107,12 @@ function tx_zeroo_customize_register( $wp_customize ) {
 	    $wp_customize->add_setting('feed_link', array(
 	        'capability' => 'edit_theme_options',
 	        'type'       => 'option',
+	        'sanitize_callback'  => 'esc_url_raw'
 	    ));
 	 
 	    $wp_customize->add_control('enable_feed_link', array(
 	        'settings'  => 'feed_link',
-	        'label'     => __('Enable RSS feed link', 'tx-next'),
+	        'label'     => __('Enable RSS feed link', 'tx-zeroo'),
 	        'section'   => 'social_link',
 	        'type'      => 'checkbox',
 	    ));

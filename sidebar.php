@@ -35,10 +35,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
           <li class="gplus"><a href="<?php echo $gplus; ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
           <?php } ?>
           <?php if( $feedlink ) { ?>
-          <li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Rss','tx-next') ?>"><i class="fa fa-rss"></i></a></li>
+          <li class="rss"><a href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('Rss','tx-zeroo') ?>"><i class="fa fa-rss"></i></a></li>
           <?php } ?>
           <?php if($loginlink ) { ?>
-          <li class="login"><a href="<?php echo wp_login_url( get_permalink() ); ?>" title="<?php _e('Login','tx-next') ?>"><i class="fa fa-user"></i></a></li>
+          <li class="login"><a href="<?php echo wp_login_url( get_permalink() ); ?>" title="<?php _e('Login','tx-zeroo') ?>"><i class="fa fa-user"></i></a></li>
           <?php } ?>
         </ul>
 	</div>
