@@ -30,11 +30,11 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 
 		'fields' => apply_filters( 'comment_form_default_fields', array(
 
-			'author' => '<div class="row"><div class="col-md-6"><p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+			'author' => '<div class="row"><div class="col-md-6"><p class="comment-form-author"><label for="author">' . __( 'Name', 'tx-zeroo' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
 
 	        			'<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p></div>',   
 
-	    	'email'  => '<div class="col-md-6"><p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .                
+	    	'email'  => '<div class="col-md-6"><p class="comment-form-email"><label for="email">' . __( 'Email', 'tx-zeroo' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .                
 
 	                	'<input id="email" class="form-control" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />'.'</p></div></div>',
 
